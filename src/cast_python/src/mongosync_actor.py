@@ -21,6 +21,7 @@ def _get_start_options(workload_yaml):
     with open(workload_yaml) as f:
         workload = yaml.safe_load(f)
     options = workload.get("EnvironmentDetails", {}).get("StartOptions")
+    print("start options", options)
     return options
 
 
