@@ -17,6 +17,12 @@ def _get_connection_urls(workload_yaml):
         )
     return uris
 
+def _get_start_options(workload_yaml):
+    with open(workload_yaml) as f:
+        workload = yaml.safe_load(f)
+    options = workload.get("EnvironmentDetails", {}).get("StartOptions")
+    return options
+
 
 def poll(workload_yaml, predicate, key):
     """
@@ -81,6 +87,8 @@ def cli():
 )
 @click.argument("workload_yaml", nargs=1)
 def start(workload_yaml):
+    start_options = _get_start_options(workload_yaml)
+
     change_state(workload_yaml, "/api/v1/start", {"Source": "cluster0", "Destination": "cluster1"})
 
 
