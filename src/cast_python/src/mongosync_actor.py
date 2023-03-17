@@ -65,6 +65,7 @@ def change_state(workload_yaml, route, body):
     """
 
     connection_urls = _get_connection_urls(workload_yaml)
+    print("change state", body)
 
     fn = functools.partial(_change_one_mongosync_state, route, body)
     with ThreadPoolExecutor() as executor:
