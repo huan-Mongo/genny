@@ -44,13 +44,10 @@ WaitForCommit:
 
 CreateCollection:
   Repeat: 1
+  BatchSize: 1
+  Threads: 1
+  DocumentCount: 1
   Database: db
-  ThrowOnFailure: false
-  CollectionCount: 1
-  Operations:
-    - OperationName: RunCommand
-      OperationCommand:
-        {create: &coll Collection0}
 
 InsertShortTestData:
   Repeat: 1
