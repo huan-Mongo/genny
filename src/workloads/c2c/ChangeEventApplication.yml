@@ -45,28 +45,6 @@ Actors:
   - *nop
   - *nop
 
-- Name: Mongosync
-  Type: Python
-  Threads: 1
-  Phases:
-  - *nop
-  - *nop
-  - LoadConfig:
-      Path: *scriptsPath
-      Key: StartMongosync
-  - LoadConfig:
-      Path: *scriptsPath
-      Key: PollForCEA
-  - *nop
-  - LoadConfig:
-      Path: *scriptsPath
-      Key: DrainWrites
-  - LoadConfig:
-      Path: *scriptsPath
-      Key: Commit
-  - LoadConfig:
-      Path: *scriptsPath
-      Key: WaitForCommit
 
 - Name: InsertDocs
   Type: Loader
