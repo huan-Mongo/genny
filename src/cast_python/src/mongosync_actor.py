@@ -23,7 +23,8 @@ def _get_start_options(workload_yaml):
     options = workload.get("EnvironmentDetails", {}).get("MongosyncStartReqOptions")
     if options is None:
         return {}
-    return options
+
+    return json.load(options)
 
 
 def poll(workload_yaml, predicate, key):
