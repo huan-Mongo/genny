@@ -16,7 +16,7 @@ Keywords:
 EnvironmentDetails:
   MongosyncConnectionURIs:
   - http://localhost:27182
-  StartOptions:
+  MongosyncStartReqOptions:
     SupportOlderVersions: false
 
 Clients:

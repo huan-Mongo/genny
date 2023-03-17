@@ -20,7 +20,7 @@ def _get_connection_urls(workload_yaml):
 def _get_start_options(workload_yaml):
     with open(workload_yaml) as f:
         workload = yaml.safe_load(f)
-    options = workload.get("EnvironmentDetails", {}).get("StartOptions")
+    options = workload.get("EnvironmentDetails", {}).get("MongosyncStartReqOptions")
     if options is None:
         return {}
     return options
