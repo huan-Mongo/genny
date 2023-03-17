@@ -74,7 +74,7 @@ Actors:
   Phases:
   - LoadConfig:
       Path: *scriptsPath
-      Key: CreateCollection
+      Key: InsertShortTestData
   - *nop
   - *nop
   - *nop
