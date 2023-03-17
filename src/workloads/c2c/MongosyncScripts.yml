@@ -51,9 +51,9 @@ CreateCollection:
 
 InsertShortTestData:
   Repeat: 1
-  BatchSize: 10000
+  BatchSize: 100
   Threads: 1
-  DocumentCount: 10000000
+  DocumentCount: 1000000
   Database: db
 
   # Note the document shape and number of collections doesn't
