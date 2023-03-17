@@ -72,7 +72,9 @@ Actors:
   Type: Loader
   Threads: 1
   Phases:
-  - *nop
+  - LoadConfig:
+      Path: *scriptsPath
+      Key: CreateCollection
   - *nop
   - *nop
   - *nop

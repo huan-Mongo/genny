@@ -49,6 +49,15 @@ InsertShortTestData:
   DocumentCount: 1000000
   Database: db
 
+CreateCollection:
+  Repeat: 1
+  Database: db
+  ThrowOnFailure: false
+  Operations:
+  - OperationName: RunCommand
+    OperationCommand:
+      {create: &coll Collection0}
+
   # Note the document shape and number of collections doesn't
   # really matter here and we are generally just testing the
   # max throughput mongosync can achieve with an unbounded
