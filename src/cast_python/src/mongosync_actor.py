@@ -93,7 +93,7 @@ def start(workload_yaml):
     start_options = _get_start_options(workload_yaml)
 
     print("start options", start_options)
-    start_options.update({"Source": "cluster0", "Destination": "cluster1"}
+    start_options.update({"Source": "cluster0", "Destination": "cluster1"})
 
     change_state(workload_yaml, "/api/v1/start", start_options)
 
