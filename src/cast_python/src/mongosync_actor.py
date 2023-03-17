@@ -5,6 +5,7 @@ import functools
 from concurrent.futures import ThreadPoolExecutor
 import click
 import yaml
+import json
 
 
 def _get_connection_urls(workload_yaml):
