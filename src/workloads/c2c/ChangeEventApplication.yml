@@ -85,11 +85,3 @@ Actors:
 
   # Note that currently there is no autorun section in this workload as it is
   # being invoked manually
-  
-pre_task:
-  - on_workload_client:
-      exec_mongo_shell:
-        connection_string: ${mongodb_setup.meta.mongodb_url}
-        script: |
-          db = db.getSiblingDB('db');
-          db.createCollection("Collection0");
