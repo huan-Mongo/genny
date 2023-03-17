@@ -20,9 +20,9 @@ def _get_connection_urls(workload_yaml):
 def _get_start_options(workload_yaml):
     with open(workload_yaml) as f:
         workload = yaml.safe_load(f)
-    print("workload", workload)
     options = workload.get("EnvironmentDetails", {}).get("StartOptions")
-    print("start options", options)
+    if options is None:
+        return {}
     return options
 
 
@@ -91,7 +91,7 @@ def cli():
 def start(workload_yaml):
     start_options = _get_start_options(workload_yaml)
 
-    change_state(workload_yaml, "/api/v1/start", {"Source": "cluster0", "Destination": "cluster1"})
+    change_state(workload_yaml, "/api/v1/start", start_options.update({"Source": "cluster0", "Destination": "cluster1"}))
 
 
 @cli.command(
