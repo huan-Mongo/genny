@@ -45,34 +45,34 @@ Actors:
   - *nop
   - *nop
 
-#- Name: Mongosync
-#  Type: Python
-#  Threads: 1
-#  Phases:
-#  - *nop
-#  - *nop
-#  - LoadConfig:
-#      Path: *scriptsPath
-#      Key: StartMongosync
-#  - LoadConfig:
-#      Path: *scriptsPath
-#      Key: PollForCEA
-#  - LoadConfig:
-#      Path: *scriptsPath
-#      Key: PauseMongosync
-#  - *nop
-#  - LoadConfig:
-#      Path: *scriptsPath
-#      Key: ResumeMongosync
-#  - LoadConfig:
-#      Path: *scriptsPath
-#      Key: DrainWrites
-#  - LoadConfig:
-#      Path: *scriptsPath
-#      Key: Commit
-#  - LoadConfig:
-#      Path: *scriptsPath
-#      Key: WaitForCommit
+- Name: Mongosync
+  Type: Python
+  Threads: 1
+  Phases:
+  - *nop
+  - *nop
+  - LoadConfig:
+      Path: *scriptsPath
+      Key: StartMongosync
+  - LoadConfig:
+      Path: *scriptsPath
+      Key: PollForCEA
+  - LoadConfig:
+      Path: *scriptsPath
+      Key: PauseMongosync
+  - *nop
+  - LoadConfig:
+      Path: *scriptsPath
+      Key: ResumeMongosync
+  - LoadConfig:
+      Path: *scriptsPath
+      Key: DrainWrites
+  - LoadConfig:
+      Path: *scriptsPath
+      Key: Commit
+  - LoadConfig:
+      Path: *scriptsPath
+      Key: WaitForCommit
 
 - Name: InsertDocs
   Type: Loader

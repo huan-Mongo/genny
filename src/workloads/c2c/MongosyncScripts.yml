@@ -85,7 +85,7 @@ InsertLargeDoc:
   Repeat: 1
   BatchSize: 1000
   Threads: 1
-  DocumentCount: 10000000
+  DocumentCount: 100000
   Database: db
 
   # Note the document shape and number of collections doesn't
