@@ -83,9 +83,9 @@ InsertShortTestData:
 
 InsertLargeDoc:
   Repeat: 1
-  BatchSize: 1000
+  BatchSize: 1
   Threads: 1
-  DocumentCount: 100000
+  DocumentCount: 100
   Database: db
 
   # Note the document shape and number of collections doesn't
