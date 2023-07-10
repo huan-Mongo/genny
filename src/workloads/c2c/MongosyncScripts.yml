@@ -97,7 +97,7 @@ InsertLargeDoc:
   Repeat: 1
   BatchSize: 1
   Threads: 1
-  DocumentCount: 100
+  DocumentCount: 2000
   Database: db
 
   # Note the document shape and number of collections doesn't
@@ -135,4 +135,4 @@ ShardCollection:
     OperationCommand:
       shardCollection: db.Collection0
       key:
-        _id: hashed
+        _id: 1
