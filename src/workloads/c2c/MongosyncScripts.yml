@@ -97,7 +97,7 @@ InsertLargeDoc:
   Repeat: 1
   BatchSize: 1
   Threads: 1
-  DocumentCount: 2000
+  DocumentCount: 3000000
   Database: db
 
   # Note the document shape and number of collections doesn't
@@ -106,7 +106,7 @@ InsertLargeDoc:
   # insert workload
   CollectionCount: 1
   Document:
-    counter: {^Inc: {start: 0}}
+    cnt: {^Inc: {start: 0}}
     a: { ^RandomInt: { min: -2147483648, max: 2147483647 } }
     b: { ^RandomString: { length: 10485760 } }
   Indexes:
@@ -136,3 +136,45 @@ ShardCollection:
       shardCollection: db.Collection0
       key:
         _id: 1
+
+ShardCollectionAndSplit:
+  Repeat: 1
+  Database: admin
+  ThrowOnFailure: false
+  Operations:
+  - OperationMetricsName: ShardCollectionMetrics
+    OperationName: AdminCommand
+    OperationCommand:
+      shardCollection: db.Collection0
+      key:
+        _id: 1
+  - OperationMetricsName: split
+    OperationName: AdminCommand
+    OperationCommand:
+      split: db.Collection0
+      middle:
+        _id: 500000
+  - OperationMetricsName: split
+    OperationName: AdminCommand
+    OperationCommand:
+      split: db.Collection0
+      middle:
+        _id: 1000000
+  - OperationMetricsName: split
+    OperationName: AdminCommand
+    OperationCommand:
+      split: db.Collection0
+      middle:
+        _id: 1500000
+  - OperationMetricsName: split
+    OperationName: AdminCommand
+    OperationCommand:
+      split: db.Collection0
+      middle:
+        _id: 20000000
+  - OperationMetricsName: split
+    OperationName: AdminCommand
+    OperationCommand:
+      split: db.Collection0
+      middle:
+        _id: 25000000

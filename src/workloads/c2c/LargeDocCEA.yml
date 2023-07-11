@@ -35,7 +35,7 @@ Actors:
       Key: SetupShardKey
   - LoadConfig:
       Path: *scriptsPath
-      Key: ShardCollection
+      Key: ShardCollectionAndSplit
   - &nop {Nop: true}
   - *nop
   - *nop
