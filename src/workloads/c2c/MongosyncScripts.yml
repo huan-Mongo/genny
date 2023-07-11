@@ -95,9 +95,9 @@ InsertShortTestData:
 
 InsertLargeDoc:
   Repeat: 1
-  BatchSize: 100
+  BatchSize: 30
   Threads: 1
-  DocumentCount: 30000
+  DocumentCount: 900
   Database: db
 
   # Note the document shape and number of collections doesn't
@@ -153,28 +153,28 @@ ShardCollectionAndSplit:
     OperationCommand:
       split: db.Collection0
       middle:
-        _id: 5000
+        _id: 150
   - OperationMetricsName: split
     OperationName: AdminCommand
     OperationCommand:
       split: db.Collection0
       middle:
-        _id: 10000
+        _id: 300
   - OperationMetricsName: split
     OperationName: AdminCommand
     OperationCommand:
       split: db.Collection0
       middle:
-        _id: 15000
+        _id: 450
   - OperationMetricsName: split
     OperationName: AdminCommand
     OperationCommand:
       split: db.Collection0
       middle:
-        _id: 200000
+        _id: 600
   - OperationMetricsName: split
     OperationName: AdminCommand
     OperationCommand:
       split: db.Collection0
       middle:
-        _id: 250000
+        _id: 750
