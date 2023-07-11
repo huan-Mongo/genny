@@ -95,7 +95,7 @@ InsertShortTestData:
 
 InsertLargeDoc:
   Repeat: 1
-  BatchSize: 1
+  BatchSize: 100
   Threads: 1
   DocumentCount: 30000
   Database: db
