@@ -59,8 +59,7 @@ Actors:
   - *nop
   - *nop
   - *nop
-  - Message: generate CEA load
-    Duration: 2 minutes
+  - *nop
   - *nop
   - *nop
   - *nop
