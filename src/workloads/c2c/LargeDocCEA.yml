@@ -42,7 +42,6 @@ Actors:
     - *nop
     - *nop
     - *nop
-    - *nop
 
 - Name: SetupSharding
   Type: AdminCommand
@@ -54,7 +53,6 @@ Actors:
   - LoadConfig:
       Path: *scriptsPath
       Key: ShardCollectionAndSplit
-  - *nop
   - *nop
   - *nop
   - *nop
@@ -121,6 +119,26 @@ Actors:
   - *nop
   - *nop
   - *nop
+
+- Name: InsertRandDocs
+  Type: Loader
+  Threads: 1
+  Phases:
+  - *nop
+  - *nop
+  - *nop
+  - *nop
+  - *nop
+  - LoadConfig:
+      Path: *scriptsPath
+      Key: InsertRandDoc
+  - *nop
+  - *nop
+  - *nop
+  - *nop
+  - *nop
+  - *nop
+
 
   # Note that currently there is no autorun section in this workload as it is
   # being invoked manually
