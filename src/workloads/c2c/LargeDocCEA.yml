@@ -41,6 +41,8 @@ Actors:
   - *nop
   - *nop
   - *nop
+  - Message: generate CEA load
+    Duration: 2 minutes
   - *nop
   - *nop
   - *nop
@@ -95,7 +97,9 @@ Actors:
       Path: *scriptsPath
       Key: InsertLargeDoc
   - *nop
-  - *nop
+  - LoadConfig:
+      Path: *scriptsPath
+      Key: InsertCEADoc
   - *nop
   - *nop
   - *nop
