@@ -24,6 +24,10 @@ Clients:
 
 ScriptsPath: &scriptsPath ./MongosyncScripts.yml
 
+GlobalDefaults:
+  Database: &Database db
+  Collection: &Collection Collection0
+
 Actors:
 
 - Name: HelloWorld
