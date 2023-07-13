@@ -130,6 +130,8 @@ Actors:
   Phases:
   - *nop
   - Repeat: 1
+    Database: db
+    Collection: Collection0
     Operations:
     - OperationName: InsertInitDoc
       OperationCommand:
