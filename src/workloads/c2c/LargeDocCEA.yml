@@ -125,7 +125,15 @@ Actors:
   Threads: 1
   Phases:
   - *nop
-  - *nop
+  - Repeat: 1
+    Operations:
+    - OperationName: InsertInitDoc
+      OperationCommand:
+        WriteOperations:
+        - WriteCommand: insertOne
+          Document: { _id: 0 }
+        - WriteCommand: insertOne
+          Document: { _id: 1000 }
   - *nop
   - *nop
   - *nop
