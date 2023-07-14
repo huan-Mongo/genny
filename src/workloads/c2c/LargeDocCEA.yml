@@ -132,6 +132,7 @@ Actors:
   - Repeat: 1
     Database: db
     Collection: Collection0
+    CollectionCount: 1
     Operations:
     - OperationName: InsertInitDoc
       OperationCommand:
