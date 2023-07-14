@@ -133,8 +133,6 @@ Actors:
   - Repeat: 1
     Database: db
     Collection: Collection0
-    CollectionCount: 1
-    Threads: 1
     Operations:
     - OperationName: bulkWrite
       OperationCommand:
