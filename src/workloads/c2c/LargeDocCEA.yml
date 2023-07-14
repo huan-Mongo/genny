@@ -126,7 +126,7 @@ Actors:
 
 
 - Name: InsertInitDocs
-  Type: RunCommand
+  Type: CrudActor
   Threads: 1
   Phases:
   - *nop
@@ -136,7 +136,7 @@ Actors:
     CollectionCount: 1
     Threads: 1
     Operations:
-    - OperationName: InsertInitDoc
+    - OperationName: bulkWrite
       OperationCommand:
         WriteOperations:
         - WriteCommand: insertOne
