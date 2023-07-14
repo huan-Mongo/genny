@@ -138,9 +138,9 @@ Actors:
       OperationCommand:
         WriteOperations:
         - WriteCommand: insertOne
-          Document: { _id: 0 }
+          Document: { _id: -1 }
         - WriteCommand: insertOne
-          Document: { _id: 1000 }
+          Document: { _id: 901 }
   - *nop
   - *nop
   - *nop
