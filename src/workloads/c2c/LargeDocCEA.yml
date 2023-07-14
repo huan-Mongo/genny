@@ -159,19 +159,7 @@ Actors:
   Threads: 1
   Phases:
   - *nop
-  - Repeat: 1
-    Database: db
-    Collection: Collection0
-    CollectionCount: 1
-    Threads: 1
-    Operations:
-    - OperationName: InsertInitDoc
-      OperationCommand:
-        WriteOperations:
-        - WriteCommand: insertOne
-          Document: { _id: 0 }
-        - WriteCommand: insertOne
-          Document: { _id: 1000 }
+  - *nop
   - *nop
   - *nop
   - *nop
