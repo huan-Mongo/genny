@@ -96,7 +96,7 @@ InsertShortTestData:
 InsertLargeDoc:
   Repeat: 1
   BatchSize: 3
-  Threads: 2
+  Threads: 10
   DocumentCount: 90
   Database: db
 
@@ -116,7 +116,7 @@ InsertLargeDoc:
 InsertCEADoc:
   Repeat: 1
   BatchSize: 30
-  Threads: 20
+  Threads: 100
   DocumentCount: 100
   Database: db
 
@@ -136,7 +136,7 @@ InsertCEADoc:
 InsertRandDoc:
   Repeat: 1
   BatchSize: 30
-  Threads: 20
+  Threads: 100
   DocumentCount: 900
   Database: db
 
