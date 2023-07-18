@@ -95,9 +95,9 @@ InsertShortTestData:
 
 InsertLargeDoc:
   Repeat: 1
-  BatchSize: 30
-  Threads: 1
-  DocumentCount: 900
+  BatchSize: 3
+  Threads: 2
+  DocumentCount: 90
   Database: db
 
   # Note the document shape and number of collections doesn't
@@ -106,7 +106,7 @@ InsertLargeDoc:
   # insert workload
   CollectionCount: 1
   Document:
-    _id: {^Inc: {start: 0, step: 1}}
+    _id: {^Inc: {start: 0, step: 10}}
     a: { ^RandomInt: { min: -2147483648, max: 2147483647 } }
     b: { ^RandomString: { length: 10485760 } }
   Indexes:
@@ -116,7 +116,7 @@ InsertLargeDoc:
 InsertCEADoc:
   Repeat: 1
   BatchSize: 30
-  Threads: 1
+  Threads: 20
   DocumentCount: 100
   Database: db
 
@@ -136,7 +136,7 @@ InsertCEADoc:
 InsertRandDoc:
   Repeat: 1
   BatchSize: 30
-  Threads: 1
+  Threads: 20
   DocumentCount: 900
   Database: db
 
