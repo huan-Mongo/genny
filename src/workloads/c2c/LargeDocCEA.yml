@@ -105,6 +105,7 @@ Actors:
 
 - Name: InsertDocs
   Type: Loader
+  Threads: 100
   Phases:
   - *nop
   - *nop
