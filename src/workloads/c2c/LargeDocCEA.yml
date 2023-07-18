@@ -154,7 +154,7 @@ Actors:
 
 - Name: InsertRandDocs
   Type: Loader
-  Threads: 1
+  Threads: 100
   Phases:
   - *nop
   - *nop
