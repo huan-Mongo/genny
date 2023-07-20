@@ -156,7 +156,7 @@ InsertCEADoc:
 InsertRandDoc:
   Repeat: 1
   BatchSize: 30
-  Threads: 10
+  Threads: 1
   DocumentCount: 1000
   Database: db
 
