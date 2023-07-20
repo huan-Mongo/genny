@@ -159,12 +159,14 @@ InsertRandDoc:
   Threads: 10
   DocumentCount: 1000
   Database: db
-  Collection: Collection0
+
+  # Note the document shape and number of collections doesn't
+  # really matter here and we are generally just testing the
+  # max throughput mongosync can achieve with an unbounded
+  # insert workload
+  CollectionCount: 1
   Document:
     _id: {^RandomDouble: { min: 0, max: 50 }}
-  Indexes:
-  - keys: { id: 1 }
-  - keys: { a: 1 }
 
 SetupShardKey:
   Repeat: 1
