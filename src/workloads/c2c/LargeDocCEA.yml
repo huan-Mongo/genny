@@ -164,7 +164,7 @@ Actors:
   - *nop
   - LoadConfig:
       Path: *scriptsPath
-      Key: InserFollowingDoc
+      Key: InsertRandDoc
   - *nop
   - *nop
   - *nop
