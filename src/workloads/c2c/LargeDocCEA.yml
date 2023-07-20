@@ -116,9 +116,10 @@ Actors:
       Path: *scriptsPath
       Key: InsertLargeDoc
   - *nop
-  - LoadConfig:
-      Path: *scriptsPath
-      Key: InsertCEADoc
+  - *nop
+#  - LoadConfig:
+#      Path: *scriptsPath
+#      Key: InsertCEADoc
   - *nop
   - *nop
   - *nop
@@ -163,7 +164,7 @@ Actors:
   - *nop
   - LoadConfig:
       Path: *scriptsPath
-      Key: InsertRandDoc
+      Key: InserFollowingDoc
   - *nop
   - *nop
   - *nop
