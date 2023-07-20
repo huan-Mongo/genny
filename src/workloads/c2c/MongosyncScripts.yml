@@ -93,7 +93,7 @@ InsertShortTestData:
   - keys: { id: 1 }
   - keys: { a: 1 }
 
-InsertLargeDoc:
+InsertLargeDoc1:
   Repeat: 1
   BatchSize: 1
   Threads: 1
@@ -107,6 +107,86 @@ InsertLargeDoc:
   CollectionCount: 1
   Document:
     _id: {^Inc: {start: 0, step: 10}}
+    a: { ^RandomInt: { min: -2147483648, max: 2147483647 } }
+    b: { ^RandomString: { length: 10485760 } }
+  Indexes:
+  - keys: { id: 1 }
+  - keys: { a: 1 }
+
+InsertLargeDoc2:
+  Repeat: 1
+  BatchSize: 1
+  Threads: 1
+  DocumentCount: 100
+  Database: db
+
+  # Note the document shape and number of collections doesn't
+  # really matter here and we are generally just testing the
+  # max throughput mongosync can achieve with an unbounded
+  # insert workload
+  CollectionCount: 1
+  Document:
+    _id: {^Inc: {start: 1, step: 10}}
+    a: { ^RandomInt: { min: -2147483648, max: 2147483647 } }
+    b: { ^RandomString: { length: 10485760 } }
+  Indexes:
+  - keys: { id: 1 }
+  - keys: { a: 1 }
+
+InsertLargeDoc3:
+  Repeat: 1
+  BatchSize: 1
+  Threads: 1
+  DocumentCount: 100
+  Database: db
+
+  # Note the document shape and number of collections doesn't
+  # really matter here and we are generally just testing the
+  # max throughput mongosync can achieve with an unbounded
+  # insert workload
+  CollectionCount: 1
+  Document:
+    _id: {^Inc: {start: 2, step: 10}}
+    a: { ^RandomInt: { min: -2147483648, max: 2147483647 } }
+    b: { ^RandomString: { length: 10485760 } }
+  Indexes:
+  - keys: { id: 1 }
+  - keys: { a: 1 }
+
+InsertLargeDoc4:
+  Repeat: 1
+  BatchSize: 1
+  Threads: 1
+  DocumentCount: 100
+  Database: db
+
+  # Note the document shape and number of collections doesn't
+  # really matter here and we are generally just testing the
+  # max throughput mongosync can achieve with an unbounded
+  # insert workload
+  CollectionCount: 1
+  Document:
+    _id: {^Inc: {start: 3, step: 10}}
+    a: { ^RandomInt: { min: -2147483648, max: 2147483647 } }
+    b: { ^RandomString: { length: 10485760 } }
+  Indexes:
+  - keys: { id: 1 }
+  - keys: { a: 1 }
+
+InsertLargeDoc5:
+  Repeat: 1
+  BatchSize: 1
+  Threads: 1
+  DocumentCount: 100
+  Database: db
+
+  # Note the document shape and number of collections doesn't
+  # really matter here and we are generally just testing the
+  # max throughput mongosync can achieve with an unbounded
+  # insert workload
+  CollectionCount: 1
+  Document:
+    _id: {^Inc: {start: 4, step: 10}}
     a: { ^RandomInt: { min: -2147483648, max: 2147483647 } }
     b: { ^RandomString: { length: 10485760 } }
   Indexes:

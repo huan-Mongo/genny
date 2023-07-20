@@ -103,7 +103,7 @@ Actors:
       Path: *scriptsPath
       Key: WaitForVerifyDone
 
-- Name: InsertDocs
+- Name: InsertDocs1
   Type: Loader
   Threads: 1
   Phases:
@@ -114,7 +114,95 @@ Actors:
   - *nop
   - LoadConfig:
       Path: *scriptsPath
-      Key: InsertLargeDoc
+      Key: InsertLargeDoc1
+  - *nop
+  - *nop
+#  - LoadConfig:
+#      Path: *scriptsPath
+#      Key: InsertCEADoc
+  - *nop
+  - *nop
+  - *nop
+  - *nop
+
+- Name: InsertDocs2
+  Type: Loader
+  Threads: 1
+  Phases:
+  - *nop
+  - *nop
+  - *nop
+  - *nop
+  - *nop
+  - LoadConfig:
+      Path: *scriptsPath
+      Key: InsertLargeDoc2
+  - *nop
+  - *nop
+#  - LoadConfig:
+#      Path: *scriptsPath
+#      Key: InsertCEADoc
+  - *nop
+  - *nop
+  - *nop
+  - *nop
+
+- Name: InsertDocs3
+  Type: Loader
+  Threads: 1
+  Phases:
+  - *nop
+  - *nop
+  - *nop
+  - *nop
+  - *nop
+  - LoadConfig:
+      Path: *scriptsPath
+      Key: InsertLargeDoc3
+  - *nop
+  - *nop
+#  - LoadConfig:
+#      Path: *scriptsPath
+#      Key: InsertCEADoc
+  - *nop
+  - *nop
+  - *nop
+  - *nop
+
+- Name: InsertDocs4
+  Type: Loader
+  Threads: 1
+  Phases:
+  - *nop
+  - *nop
+  - *nop
+  - *nop
+  - *nop
+  - LoadConfig:
+      Path: *scriptsPath
+      Key: InsertLargeDoc4
+  - *nop
+  - *nop
+#  - LoadConfig:
+#      Path: *scriptsPath
+#      Key: InsertCEADoc
+  - *nop
+  - *nop
+  - *nop
+  - *nop
+
+- Name: InsertDocs5
+  Type: Loader
+  Threads: 1
+  Phases:
+  - *nop
+  - *nop
+  - *nop
+  - *nop
+  - *nop
+  - LoadConfig:
+      Path: *scriptsPath
+      Key: InsertLargeDoc5
   - *nop
   - *nop
 #  - LoadConfig:
