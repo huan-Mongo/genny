@@ -97,7 +97,7 @@ InsertLargeDoc:
   Repeat: 1
   BatchSize: 1
   Threads: 1
-  DocumentCount: 50
+  DocumentCount: 100
   Database: db
 
   # Note the document shape and number of collections doesn't
@@ -106,7 +106,7 @@ InsertLargeDoc:
   # insert workload
   CollectionCount: 1
   Document:
-    _id: {^Inc: {start: 0, step: 1}}
+    _id: {^Inc: {start: 0, step: 10}}
     a: { ^RandomInt: { min: -2147483648, max: 2147483647 } }
     b: { ^RandomString: { length: 10485760 } }
   Indexes:
@@ -166,7 +166,8 @@ InsertRandDoc:
   # insert workload
   CollectionCount: 1
   Document:
-    _id: {^RandomDouble: { min: 0, max: 50 }}
+    _id: {^RandomDouble: { min: 0, max: 900 }}
+    b: { ^RandomString: { length: 1485760 } }
 
 SetupShardKey:
   Repeat: 1
