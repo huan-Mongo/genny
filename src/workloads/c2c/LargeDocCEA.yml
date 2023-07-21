@@ -229,7 +229,7 @@ Actors:
         - WriteCommand: insertOne
           Document: { _id: -1 }
         - WriteCommand: insertOne
-          Document: { _id: 901 }
+          Document: { _id: 1101 }
   - *nop
   - *nop
   - *nop
